@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var vs let</title>
+</head>
+<body>
+    <script>
+        //variables de tipo var, son de ámbito global
+        //variables de tipo let, son de ámbito de bloque
+        var hola = "Hola Mundo!";
+        let hello = "Hello World!";
+        console.log(hola);
+        console.log(hello);
+        console.log(window); 
+        console.log(window.hola); 
+        console.log(window.hello); 
+        //Ámbito de bloque
+        console.log("*******var******");
+        var music = "Rock";
+        console.log("Variable de música antes del bloque:", music);
+        //Esto es un bloque
+        {
+            var music = "Pop";
+            console.log("Variable de música dentro del bloque:", music);
+        }
+        console.log("Variable de música fuera del bloque:", music);
+
+        console.log("*******let******");
+        
+        let music2 = "Rock";
+        console.log("Variable de música antes del bloque:", music2);
+        //Esto es un bloque
+        {
+            let music2 = "Pop";
+            console.log("Variable de música dentro del bloque:", music2);
+        }
+        console.log("Variable de música fuera del bloque:", music2);
+    </script>
+</body>
+</html>
