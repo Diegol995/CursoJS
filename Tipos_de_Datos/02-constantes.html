@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constantes</title>
+</head>
+<body>
+    <script>
+        const PI = 3.1416;
+        console.log(PI);
+        // const a; No se puede declarar una constante sin valor
+        // PI = 4.14; No se le puede cambiar el valor a una constante a no ser que sea un objeto o array.
+        const objeto = {
+            nombre:"Diego",
+            edad: 27
+        }
+        const colores = ["Rojo", "Negro", "Violeta", "Celeste"]
+        
+        console.log(objeto)
+        console.log(colores)
+
+        objeto.nombre = "Juan" //Me permite cambiar y agregar más atributos o valores
+        objeto.mail = "ituu.95@gmail.com"
+        colores.push("Naranja")
+
+        console.log(objeto)
+        console.log(colores)
+    </script>
+</body>
+</html>
