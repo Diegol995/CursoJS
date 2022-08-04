@@ -1,0 +1,5 @@
+let result = function sumar(){
+  return result = number1 + number2;  
+}
+
+sumar(20,30);
