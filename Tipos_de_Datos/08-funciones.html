@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funciones</title>
+</head>
+<body>
+    <script>
+        //Función declarada que no retorna valor
+        function estoEsUnaFuncion(){
+            console.log("Uno");
+            console.log("Dos");
+            console.log("Tres");
+        }
+        //Se invoca a la función
+        estoEsUnaFuncion();
+
+        //Función declarada que retorna valor
+        function funcionQueRetornaValor(){
+            let a = 5;
+            let b = 4;
+            let c = a + b;
+            return c;
+        }
+        //Se invoca a la función y el resultado se guarda en una variable "resultado"
+        let resultado = funcionQueRetornaValor();
+        console.log(resultado);
+
+        /*Declaración de función con parametros
+        Se le pueden asignar parametros con valores por defecto para que no queden en
+        undefined en el caso de llamar a la función y no pasarle parametros*/
+        function saludar(nombre = "Desconocido",edad = 0){
+            console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años.`);
+        }
+        saludar("Diego", 27);
+        saludar();
+
+        /*Cuando se declara un función, no importa donde, ésta se la puede invocar desde
+        cualquier parte del nuestro código*/
+        funcionDeclarada();
+
+        function funcionDeclarada(){
+            console.log("Esto es una función declarada y se la invoca antes y después.");
+        }
+        funcionDeclarada();
+        //función en una constante
+        //funcionExpresada();
+        const funcionExpresada = function(){
+            console.log(`Esto es una función expresada dentro de una constante,
+            no se puede invocar antes como en el caso anterior, ya que la constante 
+            todavía no existe al ser invocada.`);
+        }
+        funcionExpresada();
+    </script>
+</body>
+</html>
