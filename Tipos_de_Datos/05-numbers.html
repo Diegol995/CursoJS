@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>numbers</title>
+</head>
+<body>
+    <script>
+        let a = 2;
+        let b = new Number(1);
+        let c = 3.56;
+        let d = "5.98";
+        console.log(a,b);
+        //función .toFixed() redondea el decimal al valor que le asignemos
+        console.log(c.toFixed(1));
+        //función .parseInt() devuelve solo la parte entera del número.
+        console.log(parseInt(c));
+        //operador typeof nos devuelve el tipo de valor de la variable
+        console.log(typeof a, typeof d);
+        console.log(a+b); //realiza la suma porque ambas variables son númericas
+        console.log(c+d); //concatena porque una variables es númerica y la otra es string
+        //para que se sumen hay que hacer un parseInt() o parseFloat() de 'd'
+        console.log(c+parseInt(d)); //suma solo la parte entera de 'd'
+        console.log(c+parseFloat(d)); //suma todo el conjunto, tanto la parte entera como la decimal de 'd'
+    </script>
+</body>
+</html>
