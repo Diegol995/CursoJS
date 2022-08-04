@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>indefined, null y NaN</title>
+</head>
+<body>
+    <script>
+        //undefined es el valor que le asigna JS a una variable que no fue definida;
+        let indefinida;
+        //null es el valor que le asigna el usuario/programador de manera intencional a la variable
+        //pero que de igual manera no está definida
+        let nulo = null;
+        console.log(indefinida, nulo);
+        //NaN -> Not a Number
+        //es cuando se quiere realizar operaciones con variables que no son de tipo númericos
+        let noEsUnNumero = "Hola" * 3.5;
+        console.log(noEsUnNumero);
+    </script>
+</body>
+</html>
