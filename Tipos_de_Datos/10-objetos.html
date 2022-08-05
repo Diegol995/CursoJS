@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objetos</title>
+</head>
+<body>
+    <script>
+        //forma de declarar un objeto
+        const a = {};
+        //otra forma de declara un objeto(casi no se usa más)
+        //const b = new Objet();
+
+        //Se declara objeto persona
+        /*Dentro de un objeto a las variables se las denominan atributos/propiedades
+        y a las funciones se las denominan métodos.*/
+        const persona = {
+            nombres: ["Diego", "Fabián"],
+            apellidos: ["Iturrieta", "Correa"],
+            edad: 27,
+            pasatiempos: ["Tocar la guitarra", "Jugar al futbol", "Jugar videojuegos"],
+            soltero: true,
+            contacto: {
+                email: "ituu.95@gmail.com",
+                instagram: "Diego Iturrieta",
+                tel: "1173829402"
+            },
+            // Se utiliza la palabra reservada this para acceder a las propiedades del mismo objeto
+            saludar: function(){
+                console.log(`Hola Mundo! mi nombre es ${this.nombres[0]} ${this.apellidos[0]}
+                y tengo ${this.edad} años.`);
+            },
+        }
+        //Se accede a las propiedades y funciones del objeto
+        console.log(persona);
+        //se accede a la propiedad nombres
+        console.log(persona.nombres[0]);
+        //se accede a la propiedad edad
+        console.log(persona.edad);
+        //se accede a la propiedad contacto que a su vez es un objeto
+        console.log(persona.contacto.email);
+        //se accede al método saludar y como internamente tiene un console.log, solo se invoca
+        persona.saludar();
+
+        //Funciones del objeto "Object"
+        /* .keys() devuelve en un array los nombres de referencia de los atributos
+         y funciones del objeto persona*/
+        console.log(Object.keys(persona));
+        /* .values() devuelve en un array los valores de los atributos del objeto persona*/
+        console.log(Object.values(persona));
+    </script>
+</body>
+</html>
