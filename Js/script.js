@@ -1,5 +1,3 @@
-let result = function sumar(){
-  return result = number1 + number2;  
+function saludar(){
+  alert ("Hola Mundo!");  
 }
-
-sumar(20,30);
