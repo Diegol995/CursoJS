@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrays</title>
+</head>
+<body>
+    <script>
+        const a = [];
+        const b = [1,true,"Hola",["A","B","C",[1,2,3]]];
+        console.log(a); //Muestra un array vacío
+        console.log(b); //Muestra todos los elementos del array
+        console.log(b[2]); //Muestra el elemento de la posición 2 que es "Hola".
+        console.log(b[3][2]); //Muestra el elemento de la posición 3 que resulta ser otro array
+        //y a su vez muestra el elemento de la posición 2 de ese array
+        console.log(b[3][3][0]); //mismo caso que el anterior pero con 3 arrays
+
+        //Otra forma de declarar un array
+        const c = Array.of("A","B","C",1,2,3);
+        console.log(c);
+
+        //Cuando se quiere llenar un array con muchas posiciones y que todas tengan el mismo valor
+        //se utiliza .fill
+        const d = Array(100).fill(false);
+        console.log(d);
+
+        //forma de declarar un array que ya no se utiliza
+        const e = new Array();
+        console.log(e);
+
+        const colores = ["Rojo","Verde","Azul"];
+        console.log(colores);
+        //El método .push() agrega un elemento más al final del array
+        colores.push("Amarillo");
+        console.log(colores);
+        //Y el método .pop() elimina el último elemento del array
+        colores.pop();
+        console.log(colores);
+
+        //Con forEach recorremos el array
+        //se coloca "el" como parámetro para referirse al valor del elemento
+        //y el index hace refencia a la posición del elemento
+        colores.forEach(function(el,index){
+            //y lo mostramos a través de consola en una lista
+            console.log(`<li id="${index}">${el}</li>`)
+        })
+
+    </script>
+</body>
+</html>
