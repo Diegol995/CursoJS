@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops</title>
+</head>
+<body>
+    <script>
+        /*
+            ciclos while, do while, for , foeach, for (in), for (of)
+        */
+       //for (in) se suele utilizar para recorrer objetos
+       let persona = {
+           nombre: "Lorena",
+           edad: 27,
+           email: "lore95@gmail.com"
+       }
+       for (const propiedad in persona){
+           //para acceder a los valores de la propiedad se utilizan los corchetes [] después del nombre del objeto
+           console.log(`Key: ${propiedad} Value: ${persona[propiedad]}`);
+       }
+       //for (of) nos permite recorrer culquier elmento que sea iterable como ej arrays o strings
+       //y devuelve sus valores
+       let numeros = [1,4,6,2,9,23,219];
+       for (const valores of numeros) {
+           console.log(valores);
+       }
+       let palabra = "Hola Mundo!!";
+       for (const valores of palabra) {
+           console.log(valores);
+       }
+    </script>
+</body>
+</html>
