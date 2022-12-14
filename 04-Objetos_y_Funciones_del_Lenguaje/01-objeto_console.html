@@ -42,6 +42,51 @@
         console.log("Curso de FlexBox");
         console.log("Curso de Diseño y Programación Web");
         console.groupEnd();
+
+        //Se genera una vista en tablas de las propiedades del objeto
+        //sort() ordena alfabéticamente
+        console.table(Object.entries(console).sort());
+
+        const numeros = [1,2,3,4,5],
+            vocales = ['a','e','i','o','u'];
+
+        console.table(numeros);
+        console.table(vocales);
+
+        const perro = {
+            nombre: 'Firulais',
+            raza: 'Doberman',
+            edad: 3,
+            color: 'Marrón'
+        }
+        console.table(perro);
+        console.clear();
+
+        //time() calcula el timepo que tarda en ejecutarse el código
+        console.time("Tiempo de ejecución");
+        const arreglo = Array(1000000);
+
+        for (let i=0; i<arreglo.length;i++)
+        {
+            arreglo[i] = i;
+        }
+        console.timeEnd("Tiempo de ejecución");
+
+        console.log(arreglo[3])
+        console.clear();
+
+        //count() cuenta la cantidad de veces que se ejecuto el código
+        for (let i=0; i<100;i++)
+        {
+            console.count('Count');
+            console.log(i);
+        }
+        console.clear();
+        
+        //assert() muestra un mensaje si la condición pasada por parámetros no se cumple
+        let x=3,y=2,mensaje='Se espera que "X" sea menor que "Y"';
+        console.assert(x<y,{x,y,mensaje});
+
     </script>
 </body>
 </html>
