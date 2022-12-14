@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto Date</title>
+</head>
+<body>
+    <script>
+        console.log(Date());
+        let fecha = new Date();
+        console.log(fecha);
+        //getDate arroja la fecha del mes
+        console.log(fecha.getDate());
+        //getDay arroja la posición del día de la semana 
+        //D L M Mi J V S -> 0 1 2 3 4 5 6 7
+        console.log(fecha.getDay());
+        //getMonth arroja la posición del mes
+        //E F M A M J Jul A S O N D -> 0 1 2 3 4 5 6 7 8 9 10 11
+        console.log(fecha.getMonth());
+        //getFullYear nos da el año
+        console.log(fecha.getFullYear());
+        //Horas, minutos y segúndos
+        console.log(fecha.getHours());
+        console.log(fecha.getMinutes());
+        console.log(fecha.getSeconds());
+        //Muestra la fecha y la hora en formato que pueda entender el usuario
+        console.log(fecha.toString());
+        //Arroja solo la fecha completa en formato letra, sin la hora.
+        console.log(fecha.toDateString());
+        //Arroja la fecha completa en formato número
+        console.log(fecha.toLocaleString());
+        //Muestra solo la fecha
+        console.log(fecha.toLocaleDateString());
+        //Muestra solo la hora
+        console.log(fecha.toLocaleTimeString());
+        //Muestra la hora en formato timeStamp
+        console.log(Date.now());
+
+
+        let fechaNac = new Date(1995,4,9);
+        console.log(fechaNac);
+
+    </script>
+</body>
+</html>
