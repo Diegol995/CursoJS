@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos Literales</title>
+</head>
+<body>
+    <script>
+        let nombre = "Firulais",
+        edad = 6;
+
+        const perro = {
+            nombre: nombre,
+            edad: edad,
+            Ladrar: function(){
+                console.log("Guauu Guauu!!!");
+            }
+        }
+        console.log(perro);
+        perro.Ladrar();
+
+        //Si las propiedades tienen el mismo nombre que las variables
+        //no hace falta asignarles el valor en el objeto, lo reconoce
+        //automáticamente
+        const dog = {
+            nombre,
+            edad,
+            Ladrar(){
+                console.log("Guauu Guauu Guauu!!!");
+            }
+        }
+        console.log(dog);
+        dog.Ladrar();
+    </script>
+</body>
+</html>

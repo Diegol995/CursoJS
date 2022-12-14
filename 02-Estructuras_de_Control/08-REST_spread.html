@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parámetros REST y operador Spread</title>
+</head>
+<body>
+    <script>
+        //Parámetros REST
+        //Permite que al llamar a la función, ésta pueda recibir más que
+        //los parámetros establecidos antes del parámetro REST
+        function sumar(a,b,...c){
+            resultado = a + b;
+            c.forEach(function (n){
+                resultado += n;
+            })
+            return resultado;
+        }
+
+        console.log(sumar(1,2));
+        console.log(sumar(1,2,3));
+        console.log(sumar(1,2,3,4));
+        console.log(sumar(1,2,3,4,5));
+
+        //Spread Opetator
+        const arr1 = [1,2,3,4,5],
+        arr2 = [6,7,8,9,0];
+        console.log(arr1);
+        console.log(arr2);
+
+        //Combina en un array los arrays pero sin combinar los valores
+        const arr3 = [arr1,arr2];
+        console.log(arr3);
+        //Combina en un array los valores de los array que queramos
+        const arra3 = [...arr1,...arr2];
+        console.log(arra3);
+    </script>
+</body>
+</html>

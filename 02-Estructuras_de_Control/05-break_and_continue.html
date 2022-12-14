@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break and Continue</title>
+</head>
+<body>
+    <script>
+        const numeros = [1,2,3,4,5,6,7,8,9,0];
+        for(i=0;i<numeros.length;i++)
+        {
+            if(i === 5)
+            {
+                break;
+            }
+            console.log(numeros[i]);
+        }
+
+        for(i=0;i<numeros.length;i++)
+        {
+            if(i === 5)
+            {
+                //Omite el condicional, es decir, omite el número que se
+                //encuentra en la posición 5.
+                continue;
+            }
+            console.log(numeros[i]);
+        }
+
+        for(i=0;i<numeros.length;i++)
+        {
+            if(numeros[i] % 2 == 0)
+            {
+                //Otro ejemplo para que imprima solo nos números impares
+                //omitiendo los número pares
+                continue;
+            }
+            console.log(numeros[i]);
+        }
+    </script>
+</body>
+</html>

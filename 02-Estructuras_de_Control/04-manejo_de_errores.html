@@ -8,7 +8,35 @@
 </head>
 <body>
     <script>
-        
+        try {
+            console.log("En el try se agrega el código a evaluar");
+            noExiste;
+            //Si hay un error, salta directo al catch ignorando
+            //todo el código posterior en el try.
+            console.log("Segundo mensaje en el try"); 
+        } catch (error) {
+            console.log(`Catch, captura cualquier error surgido o declarado en
+el bloque try`);
+            console.log(error);
+        } finally
+        {
+            console.log(`Finally se ejecuta siempre al final del try-catch,
+ya sea que haya error o no`);
+        }
+
+
+        try {
+            let numero = "y";
+
+            if (isNaN(numero)) //Función para determinar si la variable no es un número.
+            {
+                //Se personaliza el error esperado
+                throw new Error(`El dato ingresado no es de tipo numérico`);
+            }
+            console.log(numero*numero);
+        } catch (error) {
+            console.log(`Se produjo el siguiente ${error}`);
+        }
     </script>
 </body>
 </html>

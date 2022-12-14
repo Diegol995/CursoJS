@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototipos</title>
+</head>
+<body>
+    <script>
+        /*
+        POO = Programación Orientada a Objetos
+        Clases = Modelo a seguir
+        Objetos = Es una instancia de una clase
+        -Atributos = Es una característica o propiedad del objeto
+        (Son variables dentro del objeto)
+        -Métodos = Son las acciones que un objeto puede realizar
+        (Son funciones dentro del objeto)
+        */
+
+        //Se crean objetos literales(Sin constructor)
+        //lo que genera que se duplique el código
+        /*const animal = {
+            nombre: "Firulais",
+            sonar() {
+                console.log("Estoy haciendo un sonido.");
+            }
+        }
+        console.log(animal);
+
+        const animal2 = {
+            nombre: "Maya",
+            sonar() {
+                console.log("Estoy haciendo un sonido.");
+            }
+        }
+        console.log(animal2);*/
+
+        //Se crean objetos mediante una función constructora
+        //Función Constructora
+        /*function Animal(nombre,genero){
+            //Atributos
+            this.nombre = nombre;
+            this.genero = genero;
+
+            //Métodos
+            this.Hablar = function(){
+                console.log("Estoy hablando.");
+            }
+
+            this.Saludar = function(){
+                console.log(`Hola, mi nombre es ${this.nombre}.`);
+            }
+        }*/
+
+        //No se recomienda colocar los métodos dentro de la función constructora
+        //sino directamente al prototipo del objeto para evitar la duplicación
+        //de métodos y ahorrar memoria y rendimiento cada vez que se cree un objeto nuevo
+        function Animal(nombre,genero){
+            //Atributos
+            this.nombre = nombre;
+            this.genero = genero;
+
+        }
+        //Métodos agregados al prototipo de los objetos
+        Animal.prototype.Hablar = function(){
+            console.log("Estoy hablando.");
+        }
+
+        Animal.prototype.Saludar = function(){
+            console.log(`Hola, mi nombre es ${this.nombre}.`);
+        }
+
+        const animal1 = new Animal("Firulais","Macho"),
+        animal2 = new Animal("Maya","Hembra");
+
+        console.log(animal1);
+        console.log(animal2);
+
+        animal1.Hablar();
+        animal1.Saludar();
+
+        animal2.Hablar();
+        animal2.Saludar();
+    </script>
+</body>
+</html>

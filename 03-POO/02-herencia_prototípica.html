@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herencia Prototípica</title>
+</head>
+<body>
+    <script>
+        function Animal(nombre,genero){
+            //Atributos
+            this.nombre = nombre;
+            this.genero = genero;
+
+        }
+        //Métodos agregados al prototipo de los objetos
+        Animal.prototype.Hablar = function(){
+            console.log("Estoy hablando.");
+        }
+
+        Animal.prototype.Saludar = function(){
+            console.log(`Hola, mi nombre es ${this.nombre} y soy ${this.genero}.`);
+        }
+
+        //Herencia prototípica
+        function Perro(nombre, genero, tamanio){
+            this.super = Animal;
+            this.super(nombre,genero);
+            this.tamanio = tamanio;
+        }
+
+        //Perro está heredando de Animal
+        Perro.prototype = new Animal();
+        Perro.prototype.constructor = Perro;
+
+        //Sobreesctritura de métodos del prototipo padre en el hijo
+        Perro.prototype.Hablar = function(){
+            console.log(`Soy un perro ${this.tamanio} y mi sonido es el ladrido.`);
+        }
+        Perro.prototype.Ladrar = function(){
+            console.log("Guauu!! Guauu!!");
+        }
+
+        const animal1 = new Perro("Firulais","Macho","Grande"),
+        animal2 = new Animal("Maya","Hembra");
+
+        console.log(animal1);
+        console.log(animal2);
+
+        animal1.Hablar();
+        animal1.Saludar();
+        animal1.Ladrar();
+
+        animal2.Hablar();
+        animal2.Saludar();
+    </script>
+</body>
+</html>

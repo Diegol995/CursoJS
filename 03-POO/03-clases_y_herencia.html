@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases y Herencia</title>
+</head>
+<body>
+    <script>
+        //Clase Animal
+        class Animal{
+            constructor(nombre,genero){
+                //Atributos
+                this.nombre = nombre;
+                this.genero = genero;
+            }
+            //Métodos
+            Hablar(){
+                console.log("Estoy hablando.");
+            }
+
+            Saludar(){
+                console.log(`Hola, mi nombre es ${this.nombre} y soy ${this.genero}.`);
+            }
+        }
+        class Perro extends Animal {
+            constructor(nombre,genero,tamanio){
+                //Con el método super se manda a llamar al constructor
+                //de la clase padre
+                super(nombre,genero);
+                this.tamanio = tamanio;
+            }
+            //Sobreescritura de métodos
+            Hablar(){
+                console.log(`Soy un perro ${this.tamanio} y mi sonido es el ladrido.`);
+            }
+            //Nuevo método
+            Ladrar(){
+                console.log("Guauu Guauu!!");
+            }
+        }
+        const yara = new Animal("Yara","Hembra"),
+        firulais = new Perro("Firualis","Macho","Grande");
+
+        console.log(yara);
+        yara.Hablar();
+        yara.Saludar();
+        console.log(firulais);
+        firulais.Saludar();
+        firulais.Hablar();
+        firulais.Ladrar();
+
+    </script>
+</body>
+</html>

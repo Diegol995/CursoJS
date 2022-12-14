@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+<body>
+    <script>
+        //Función normal
+        /*const saludar = function(){
+            console.log("Hola Mundo!");
+        }
+        saludar();
+        //Arrow Function
+        const saludar = ()=> console.log("Hola Mundo!");
+        saludar();
+
+        //Cuándo la arrow function recibe un solo parámetro no es necesario
+        //colocar los paréntesis antes de la flecha
+        const saludar = nombre => console.log(`Hola ${nombre}!`);
+        saludar("Diego");*/
+
+        /*const sumar = function(a,b){
+            return a+b;
+        }
+        console.log(sumar(3,5));
+
+        //Cuándo la función tiene una sola linea, no es necesario declarar
+        //los corchetes y tampoco colocar el return con la arrow function.
+        const sumar = (a,b) => a+b;
+        console.log(sumar(3,5));
+        
+        const FuncionDeVariasLineas = () => {
+            console.log("Uno");
+            console.log("Dos");
+            console.log("Tres");
+        }
+        FuncionDeVariasLineas();
+
+        const numeros = [1,2,3,4,5];
+        numeros.forEach((el,index) => console.log(`${el} se encuentra en la posición ${index}`));*/
+
+        /*//Ésta función declarada de ésta manera y con el this trae la información
+        //del Objeto Window del DOM
+        function Perro() {
+            console.log(this);
+        }
+        Perro();
+
+        //La función Ladrar declara así, respeta el contexto del objeto
+        //trayendo la información del mismo
+        const perro = {
+            nombre: "Firulais",
+            Ladrar: function(){
+                console.log(this);
+            }
+        }
+        perro.Ladrar();*/
+
+        //En cambio si declaro la función con arrow function, no respeta
+        //el contexto y trae la informacion de window del DOM
+        const perro = {
+            nombre: "Firulais",
+            Ladrar: () => {
+                console.log(this);
+            }
+        }
+        perro.Ladrar();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto Console</title>
+</head>
+<body>
+    <script>
+        console.log(console);
+        console.error("Esto es un mensaje de error");
+        console.warn("Esto es un mensaje de aviso");
+        console.info("Esto es un mensaje informativo");
+        console.log("Un registro de lo que ha pasado en nuestra aplicación");
+
+        let nombre="Diego",apellido="Iturrieta",edad=27;
+        console.log(nombre);
+        console.log(apellido);
+        console.log(edad);
+        console.log(nombre, apellido, edad);
+        console.log(`Hola mi nombre es ${nombre} ${apellido} y tengo ${edad} años.`);
+        //%s = string, %d = dígito
+        console.log(`Hola mi nombre es %s %s y tengo %d años.`, nombre, apellido, edad);
+        console.clear();
+
+        console.log(window);
+        console.log(document);
+
+        console.group("Cursos de @JonMircha en YouTube.");
+        console.log("Curso de JavaScript");
+        console.log("Curso de Node.js");
+        console.log("Curso de PWAs");
+        console.log("Curso de FlexBox");
+        console.log("Curso de Diseño y Programación Web");
+        console.groupEnd();
+
+        console.groupCollapsed("Cursos de @JonMircha en YouTube.");
+        console.log("Curso de JavaScript");
+        console.log("Curso de Node.js");
+        console.log("Curso de PWAs");
+        console.log("Curso de FlexBox");
+        console.log("Curso de Diseño y Programación Web");
+        console.groupEnd();
+    </script>
+</body>
+</html>
